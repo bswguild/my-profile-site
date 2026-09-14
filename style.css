@@ -1,0 +1,188 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #059669;
+  color: #fff;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6ee7b7;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #047857;
+}
+
+/* hero background glow */
+.hero-glow {
+  background:
+    radial-gradient(600px circle at 20% 20%, rgba(16, 185, 129, 0.18), transparent 60%),
+    radial-gradient(500px circle at 80% 30%, rgba(45, 212, 191, 0.18), transparent 60%);
+}
+.dark .hero-glow {
+  background:
+    radial-gradient(600px circle at 20% 20%, rgba(16, 185, 129, 0.22), transparent 60%),
+    radial-gradient(500px circle at 80% 30%, rgba(45, 212, 191, 0.16), transparent 60%);
+}
+
+/* active nav link */
+.nav-link.active {
+  color: #059669;
+}
+.dark .nav-link.active {
+  color: #34d399;
+}
+
+/* skill card */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+}
+.dark .skill-card {
+  background-color: rgba(30, 41, 59, 0.5);
+  border-color: #334155;
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2);
+  border-color: #6ee7b7;
+}
+.dark .skill-card:hover {
+  border-color: #047857;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.25);
+}
+.skill-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+/* project card */
+.project-card {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.dark .project-card {
+  background-color: rgba(15, 23, 42, 0.6);
+  border-color: #334155;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.25);
+  border-color: #6ee7b7;
+}
+.dark .project-card:hover {
+  border-color: #047857;
+  box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.3);
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background-color: #ecfdf5;
+  color: #047857;
+}
+.dark .tag {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+}
+
+.project-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #059669;
+  transition: color 0.2s ease;
+}
+.project-link:hover {
+  color: #047857;
+}
+.dark .project-link {
+  color: #34d399;
+}
+.dark .project-link:hover {
+  color: #6ee7b7;
+}
+
+/* contact card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.dark .contact-card {
+  background-color: rgba(30, 41, 59, 0.5);
+  border-color: #334155;
+}
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2);
+  border-color: #6ee7b7;
+}
+.dark .contact-card:hover {
+  border-color: #047857;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.25);
+}
+.contact-icon {
+  font-size: 1.5rem;
+}
+
+/* hero avatar graphic */
+.avatar-blob {
+  animation: blob-float 6s ease-in-out infinite;
+}
+@keyframes blob-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.float-badge {
+  animation: badge-float 5s ease-in-out infinite;
+}
+.float-badge-delay-1 {
+  animation-delay: 1.2s;
+}
+.float-badge-delay-2 {
+  animation-delay: 2.4s;
+}
+@keyframes badge-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-4deg); }
+}
+
+/* scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
